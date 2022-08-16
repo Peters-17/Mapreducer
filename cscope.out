@@ -1,0 +1,1458 @@
+cscope 15 /afs/cs.wisc.edu/p/course/cs537-yuvraj/public/p4 -q 0000000100 0000006628
+	@hashmap.c
+
+1 
+	~<¡dlib.h
+>
+
+2 
+	~<¡dio.h
+>
+
+3 
+	~<¡ršg.h
+>
+
+4 
+	~<”ºo.h
+>
+
+5 
+	~"hashm­.h
+"
+
+7 
+	#FNV_OFFSET
+ 14695981039346656037UL
+
+	)
+
+8 
+	#FNV_PRIME
+ 1099511628211UL
+
+	)
+
+10 
+HashM­
+* 
+	$M­In™
+()
+
+12 
+HashM­
+* 
+hashm­
+ = (HashM­*è
+	`m®loc
+((HashMap));
+
+13 
+hashm­
+->
+cÚ‹Ás
+ = (
+M­Paœ
+**è
+	`ÿÎoc
+(
+MAP_INIT_CAPACITY
+, (MapPair*));
+
+14 
+hashm­
+->
+ÿ·c™y
+ = 
+MAP_INIT_CAPACITY
+;
+
+15 
+hashm­
+->
+size
+ = 0;
+
+16  
+hashm­
+;
+
+17 
+	}
+}
+
+19 
+	$M­Put
+(
+HashM­
+* 
+hashm­
+, * 
+key
+, * 
+v®ue
+, 
+v®ue_size
+)
+
+21 ià(
+hashm­
+->
+size
+ > (hashm­->
+ÿ·c™y
+ / 2)) {
+
+22 ià(
+	`»size_m­
+(
+hashm­
+) < 0) {
+
+23 
+	`ex™
+(0);
+
+27 
+M­Paœ
+* 
+Ãw·œ
+ = (M­Paœ*è
+	`m®loc
+((MapPair));
+
+28 
+h
+;
+
+30 
+Ãw·œ
+->
+key
+ = 
+	`¡rdup
+(key);
+
+31 
+Ãw·œ
+->
+v®ue
+ = (*)
+	`m®loc
+(
+v®ue_size
+);
+
+32 
+	`memıy
+(
+Ãw·œ
+->
+v®ue
+, v®ue, 
+v®ue_size
+);
+
+33 
+h
+ = 
+	`Hash
+(
+key
+, 
+hashm­
+->
+ÿ·c™y
+);
+
+35 
+hashm­
+->
+cÚ‹Ás
+[
+h
+] !ğ
+NULL
+) {
+
+37 ià(!
+	`¡rcmp
+(
+key
+, 
+hashm­
+->
+cÚ‹Ás
+[
+h
+]->key)) {
+
+38 
+	`ä“
+(
+hashm­
+->
+cÚ‹Ás
+[
+h
+]);
+
+39 
+hashm­
+->
+cÚ‹Ás
+[
+h
+] = 
+Ãw·œ
+;
+
+42 
+h
+++;
+
+43 ià(
+h
+ =ğ
+hashm­
+->
+ÿ·c™y
+)
+
+44 
+h
+ = 0;
+
+48 
+hashm­
+->
+cÚ‹Ás
+[
+h
+] = 
+Ãw·œ
+;
+
+49 
+hashm­
+->
+size
+ += 1;
+
+50 
+	}
+}
+
+52 * 
+	$M­G‘
+(
+HashM­
+* 
+hashm­
+, * 
+key
+)
+
+54 
+h
+ = 
+	`Hash
+(
+key
+, 
+hashm­
+->
+ÿ·c™y
+);
+
+55 
+hashm­
+->
+cÚ‹Ás
+[
+h
+] !ğ
+NULL
+) {
+
+56 ià(!
+	`¡rcmp
+(
+key
+, 
+hashm­
+->
+cÚ‹Ás
+[
+h
+]->key)) {
+
+57  
+hashm­
+->
+cÚ‹Ás
+[
+h
+]->
+v®ue
+;
+
+59 
+h
+++;
+
+60 ià(
+h
+ =ğ
+hashm­
+->
+ÿ·c™y
+) {
+
+61 
+h
+ = 0;
+
+64  
+NULL
+;
+
+65 
+	}
+}
+
+67 
+size_t
+ 
+	$M­Size
+(
+HashM­
+* 
+m­
+)
+
+69  
+m­
+->
+size
+;
+
+70 
+	}
+}
+
+72 
+	$»size_m­
+(
+HashM­
+* 
+m­
+)
+
+74 
+M­Paœ
+** 
+‹mp
+;
+
+75 
+size_t
+ 
+Ãwÿ·c™y
+ = 
+m­
+->
+ÿ·c™y
+ * 2;
+
+78 
+‹mp
+ = (
+M­Paœ
+**è
+	`ÿÎoc
+(
+Ãwÿ·c™y
+, (MapPair*));
+
+79 ià(
+‹mp
+ =ğ
+NULL
+) {
+
+80 
+	`´štf
+("M®loø”rÜ! %s\n", 
+	`¡»¼Ü
+(
+”ºo
+));
+
+84 
+size_t
+ 
+i
+;
+
+85 
+h
+;
+
+86 
+M­Paœ
+* 
+’Œy
+;
+
+88 
+i
+ = 0; i < 
+m­
+->
+ÿ·c™y
+; i++) {
+
+89 ià(
+m­
+->
+cÚ‹Ás
+[
+i
+] !ğ
+NULL
+)
+
+90 
+’Œy
+ = 
+m­
+->
+cÚ‹Ás
+[
+i
+];
+
+93 
+h
+ = 
+	`Hash
+(
+’Œy
+->
+key
+, 
+Ãwÿ·c™y
+);
+
+94 
+‹mp
+[
+h
+] !ğ
+NULL
+) {
+
+95 
+h
+++;
+
+96 ià(
+h
+ =ğ
+Ãwÿ·c™y
+)
+
+97 
+h
+ = 0;
+
+99 
+‹mp
+[
+h
+] = 
+’Œy
+;
+
+103 
+	`ä“
+(
+m­
+->
+cÚ‹Ás
+);
+
+105 
+m­
+->
+cÚ‹Ás
+ = 
+‹mp
+;
+
+106 
+m­
+->
+ÿ·c™y
+ = 
+Ãwÿ·c™y
+;
+
+108 
+	}
+}
+
+112 
+size_t
+ 
+	$Hash
+(* 
+key
+, 
+size_t
+ 
+ÿ·c™y
+) {
+
+113 
+size_t
+ 
+hash
+ = 
+FNV_OFFSET
+;
+
+114 cÚ¡ *
+p
+ = 
+key
+; *p;…++) {
+
+115 
+hash
+ ^ğ(
+size_t
+)()(*
+p
+);
+
+116 
+hash
+ *ğ
+FNV_PRIME
+;
+
+117 
+hash
+ ^ğ(
+size_t
+)(*
+p
+);
+
+119  (
+hash
+ % 
+ÿ·c™y
+);
+
+120 
+	}
+}
+
+	@hashmap.h
+
+1 #iâdeà
+__hashm­_h__
+
+
+2 
+	#__hashm­_h__
+
+
+	)
+
+4 
+	#MAP_INIT_CAPACITY
+ 11
+
+	)
+
+7 * 
+	mkey
+;
+
+8 * 
+	mv®ue
+;
+
+9 } 
+	tM­Paœ
+;
+
+12 
+M­Paœ
+** 
+	mcÚ‹Ás
+;
+
+13 
+size_t
+ 
+	mÿ·c™y
+;
+
+14 
+size_t
+ 
+	msize
+;
+
+15 } 
+	tHashM­
+;
+
+19 
+HashM­
+* 
+M­In™
+();
+
+20 
+M­Put
+(
+HashM­
+* 
+m­
+, * 
+key
+, * 
+v®ue
+, 
+v®ue_size
+);
+
+21 * 
+M­G‘
+(
+HashM­
+* 
+m­
+, * 
+key
+);
+
+22 
+size_t
+ 
+M­Size
+(
+HashM­
+* 
+m­
+);
+
+25 
+»size_m­
+(
+HashM­
+* 
+m­
+);
+
+26 
+size_t
+ 
+Hash
+(* 
+key
+, size_ˆ
+ÿ·c™y
+);
+
+	@main.c
+
+1 
+	~<as£¹.h
+>
+
+2 
+	~<¡dio.h
+>
+
+3 
+	~<¡dlib.h
+>
+
+4 
+	~<¡ršg.h
+>
+
+5 
+	~<¡dšt.h
+>
+
+6 
+	~"m­»duû.h
+"
+
+7 
+	~"hashm­.h
+"
+
+9 
+HashM­
+* 
+	ghashm­
+;
+
+11 
+	$M­
+(*
+fe_Çme
+) {
+
+12 
+FILE
+ *
+å
+ = 
+	`fİ’
+(
+fe_Çme
+, "r");
+
+13 
+	`as£¹
+(
+å
+ !ğ
+NULL
+);
+
+15 *
+lše
+ = 
+NULL
+;
+
+16 
+size_t
+ 
+size
+ = 0;
+
+17 
+	`g‘lše
+(&
+lše
+, &
+size
+, 
+å
+) != -1) {
+
+18 *
+tok’
+, *
+dummy
+ = 
+lše
+;
+
+19 (
+tok’
+ = 
+	`¡r£p
+(&
+dummy
+, " \t\n\r")è!ğ
+NULL
+) {
+
+20 ià(!
+	`¡rcmp
+(
+tok’
+, ""))
+
+23 
+	`MR_Em™
+(
+tok’
+, "1");
+
+26 
+	`ä“
+(
+lše
+);
+
+27 
+	`fşo£
+(
+å
+);
+
+28 
+	}
+}
+
+30 
+	$Reduû
+(*
+key
+, 
+G‘‹r
+ 
+g‘_Ãxt
+, 
+·¹™iÚ_numb”
+) {
+
+32 *
+couÁ
+ = (*)
+	`m®loc
+(());
+
+33 *
+couÁ
+ = 0;
+
+34 *
+v®ue
+;
+
+36 (
+v®ue
+ = 
+	`g‘_Ãxt
+(
+key
+, 
+·¹™iÚ_numb”
+)è!ğ
+NULL
+)
+
+37 (*
+couÁ
+)++;
+
+39 
+	`M­Put
+(
+hashm­
+, 
+key
+, 
+couÁ
+, ());
+
+40 
+	}
+}
+
+47 
+	$maš
+(
+¬gc
+, *
+¬gv
+[]) {
+
+48 ià(
+¬gc
+ < 3) {
+
+49 
+	`´štf
+("Invalid usage: ./hashmap <filename> ... <searchterm>\n");
+
+53 
+hashm­
+ = 
+	`M­In™
+();
+
+55 * 
+£¬ch‹rm
+ = 
+¬gv
+[
+¬gc
+ - 1];
+
+56 
+¬gc
+ -= 1;
+
+59 
+	`MR_Run
+(
+¬gc
+, 
+¬gv
+, 
+M­
+, 10, 
+Reduû
+, 10, 
+MR_DeçuÉHashP¬t™iÚ
+);
+
+61 *
+»suÉ
+;
+
+62 ià((
+»suÉ
+ = 
+	`M­G‘
+(
+hashm­
+, 
+£¬ch‹rm
+)è!ğ
+NULL
+) {
+
+63 
+	`´štf
+("Found % %dimes\n", 
+£¬ch‹rm
+, *(*)
+»suÉ
+);
+
+65 
+	`´štf
+("Word‚ot found!\n");
+
+69 
+	}
+}
+
+	@mapreduce.h
+
+1 #iâdeà
+__m­»duû_h__
+
+
+2 
+	#__m­»duû_h__
+
+
+	)
+
+5 *(*
+	tG‘‹r
+)(*
+	tkey
+, 
+	t·¹™iÚ_numb”
+);
+
+6 (*
+	tM­³r
+)(*
+	tfe_Çme
+);
+
+7 (*
+	tReduûr
+)(*
+	tkey
+, 
+	tG‘‹r
+ 
+	tg‘_func
+, 
+	t·¹™iÚ_numb”
+);
+
+8 (*
+	tP¬t™iÚ”
+)(*
+	tkey
+, 
+	tnum_·¹™iÚs
+);
+
+11 
+	`MR_Em™
+(*
+key
+, *
+v®ue
+);
+
+13 
+	`MR_DeçuÉHashP¬t™iÚ
+(*
+key
+, 
+num_·¹™iÚs
+);
+
+15 
+	`MR_Run
+(
+¬gc
+, *
+¬gv
+[],
+
+16 
+M­³r
+ 
+m­
+, 
+num_m­³rs
+,
+
+17 
+Reduûr
+ 
+»duû
+, 
+num_»duûrs
+,
+
+18 
+P¬t™iÚ”
+ 
+·¹™iÚ
+);
+
+	@sequential_mapreduce.c
+
+1 
+	~<¡dlib.h
+>
+
+2 
+	~<¡ršg.h
+>
+
+3 
+	~<¡dio.h
+>
+
+4 
+	~<”ºo.h
+>
+
+5 
+	~"m­»duû.h
+"
+
+6 
+	~"hashm­.h
+"
+
+8 
+	skv
+ {
+
+9 * 
+	mkey
+;
+
+10 * 
+	mv®ue
+;
+
+13 
+	skv_li¡
+ {
+
+14 
+kv
+** 
+	m–em’ts
+;
+
+15 
+size_t
+ 
+	mnum_–em’ts
+;
+
+16 
+size_t
+ 
+	msize
+;
+
+19 
+kv_li¡
+ 
+	gkvl
+;
+
+20 
+size_t
+ 
+	gkvl_couÁ”
+;
+
+22 
+	$š™_kv_li¡
+(
+size_t
+ 
+size
+) {
+
+23 
+kvl
+.
+–em’ts
+ = (
+kv
+**è
+	`m®loc
+(
+size
+ * (kv*));
+
+24 
+kvl
+.
+num_–em’ts
+ = 0;
+
+25 
+kvl
+.
+size
+ = size;
+
+26 
+	}
+}
+
+28 
+	$add_to_li¡
+(
+kv
+* 
+–t
+) {
+
+29 ià(
+kvl
+.
+num_–em’ts
+ =ğkvl.
+size
+) {
+
+30 
+kvl
+.
+size
+ *= 2;
+
+31 
+kvl
+.
+–em’ts
+ = 
+	`»®loc
+(kvl.–em’ts, kvl.
+size
+ * (
+kv
+*));
+
+33 
+kvl
+.
+–em’ts
+[kvl.
+num_–em’ts
+++] = 
+–t
+;
+
+34 
+	}
+}
+
+36 * 
+	$g‘_func
+(* 
+key
+, 
+·¹™iÚ_numb”
+) {
+
+37 ià(
+kvl_couÁ”
+ =ğ
+kvl
+.
+num_–em’ts
+) {
+
+38  
+NULL
+;
+
+40 
+kv
+ *
+cu¼_–t
+ = 
+kvl
+.
+–em’ts
+[
+kvl_couÁ”
+];
+
+41 ià(!
+	`¡rcmp
+(
+cu¼_–t
+->
+key
+, key)) {
+
+42 
+kvl_couÁ”
+++;
+
+43  
+cu¼_–t
+->
+v®ue
+;
+
+45  
+NULL
+;
+
+46 
+	}
+}
+
+48 
+	$cmp
+(cÚ¡ * 
+a
+, cÚ¡ * 
+b
+) {
+
+49 * 
+¡r1
+ = (*(
+kv
+ **)
+a
+)->
+key
+;
+
+50 * 
+¡r2
+ = (*(
+kv
+ **)
+b
+)->
+key
+;
+
+51  
+	`¡rcmp
+(
+¡r1
+, 
+¡r2
+);
+
+52 
+	}
+}
+
+54 
+	$MR_Em™
+(* 
+key
+, * 
+v®ue
+)
+
+56 
+kv
+ *
+–t
+ = (kv*è
+	`m®loc
+((kv));
+
+57 ià(
+–t
+ =ğ
+NULL
+) {
+
+58 
+	`´štf
+("M®loø”rÜ! %s\n", 
+	`¡»¼Ü
+(
+”ºo
+));
+
+59 
+	`ex™
+(1);
+
+61 
+–t
+->
+key
+ = 
+	`¡rdup
+(key);
+
+62 
+–t
+->
+v®ue
+ = 
+	`¡rdup
+(value);
+
+63 
+	`add_to_li¡
+(
+–t
+);
+
+66 
+	}
+}
+
+68 
+	$MR_DeçuÉHashP¬t™iÚ
+(*
+key
+, 
+num_·¹™iÚs
+) {
+
+70 
+	}
+}
+
+72 
+	$MR_Run
+(
+¬gc
+, *
+¬gv
+[], 
+M­³r
+ 
+m­
+, 
+num_m­³rs
+,
+
+73 
+Reduûr
+ 
+»duû
+, 
+num_»duûrs
+, 
+P¬t™iÚ”
+ 
+·¹™iÚ
+)
+
+75 
+	`š™_kv_li¡
+(10);
+
+76 
+i
+;
+
+77 
+i
+ = 1; i < 
+¬gc
+; i++) {
+
+78 (*
+m­
+)(
+¬gv
+[
+i
+]);
+
+81 
+	`qsÜt
+(
+kvl
+.
+–em’ts
+, kvl.
+num_–em’ts
+, (
+kv
+*), 
+cmp
+);
+
+85 
+kvl_couÁ”
+ = 0;
+
+86 
+kvl_couÁ”
+ < 
+kvl
+.
+num_–em’ts
+) {
+
+87 (*
+»duû
+)((
+kvl
+.
+–em’ts
+[
+kvl_couÁ”
+])->
+key
+, 
+g‘_func
+, 0);
+
+89 
+	}
+}
+
+	@
+1
+.
+0
+5
+62
+hashmap.c
+hashmap.h
+main.c
+mapreduce.h
+sequential_mapreduce.c
